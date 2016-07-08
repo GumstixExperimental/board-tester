@@ -6,7 +6,7 @@
 #include<stdio.h>
 #include<dirent.h>
 
-#define PWMDIR "sys/class/pwm"
+#define PWMDIR "/sys/class/pwm"
 
 typedef struct pwmStatus_t{
 	char *path;
@@ -15,7 +15,7 @@ typedef struct pwmStatus_t{
 	int enable;
 	}pwmStatus;
 	
-int initPwms(pwmStatus **pwms);
+int initPwms(pwmStatus ***pwms);
 int closePwms(pwmStatus **pwms, int npwms);
 int getPwm(pwmStatus *pwm);
 int setPwm(pwmStatus *pwm);
